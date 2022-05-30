@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://reflection.obj" type="PackedScene" id=1]
+[ext_resource path="res://cube1.tscn" type="PackedScene" id=2]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+tonemap_mode = 4
+tonemap_white = 6.0
+
+[node name="Spatial" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="reflection" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, -55, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.785992, 0.607799, 0.113127, -0.383442, 0.335719, 0.860386, 0.484963, -0.719634, 0.496928, -12.4429, 0.969421, 2.66785 )
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 50.0
+
+[node name="BakedLightmap" type="BakedLightmap" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
+extents = Vector3( 70, 60, 70 )
+quality = 0
+bounces = 1
+atlas_max_size = 2048
+environment_mode = 1
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.405835, 0.10274, -0.908153, 0, 0.993661, 0.112414, 0.913946, -0.0456216, 0.403263, 4.71238, 1.16081, 6.93669 )
+
+[node name="cube1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17438, -7.04794, 0 )
+
+[node name="cube2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0048027, -7.04794, 0 )
+
+[node name="cube3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23935, -7.04794, 0 )
+
+[node name="cube4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23935, -4.66453, -2.20373 )
+
+[node name="cube5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23935, -4.66453, 0.0188341 )
+
+[node name="cube6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23935, -4.66453, 2.2666 )
+
+[node name="cube7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0755546, -4.66453, 2.2666 )
+
+[node name="cube8" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0755546, -4.66453, 0.0572631 )
+
+[node name="cube9" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0755546, -4.66453, -2.46755 )
+
+[node name="cube10" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10373, -4.66453, -2.46755 )
+
+[node name="cube11" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10373, -4.66453, -0.126484 )
+
+[node name="cube12" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10373, -4.66453, 2.10394 )
+
+[node name="cube13" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10373, -2.49497, 2.10394 )
+
+[node name="cube14" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10373, -1.8847, -0.0548925 )
+
+[node name="cube15" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.68625, -2.49497, -2.30517 )
+
+[node name="cube16" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13661, -2.49497, -2.30517 )
+
+[node name="cube17" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.056946, -0.474559, -0.0728936 )
+
+[node name="cube18" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.056946, -2.49497, 2.07767 )
+
+[node name="cube19" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14829, -2.49497, 2.07767 )
+
+[node name="cube20" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14829, 1.17534, -0.0201883 )
